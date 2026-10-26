@@ -19,3 +19,9 @@ const updateProgress=()=>{const total=document.documentElement.scrollHeight-inne
 addEventListener('scroll',updateProgress,{passive:true});
 updateProgress();
 
+// Un seul outil développé à la fois : plus lisible, surtout sur téléphone.
+document.querySelectorAll('.tool-panel').forEach(panel=>panel.addEventListener('toggle',()=>{
+  if(!panel.open)return;
+  document.querySelectorAll('.tool-panel[open]').forEach(other=>{if(other!==panel)other.open=false;});
+}));
+
