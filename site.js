@@ -4,7 +4,7 @@ button?.addEventListener('click',()=>{const open=nav.classList.toggle('open');bu
 nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button?.setAttribute('aria-expanded','false');}));
 
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealTargets=[...document.querySelectorAll('main > section:not(:first-child),.door,.project-tile,.ledger-row,.chapter-grid article')];
+const revealTargets=[...document.querySelectorAll('main > section:not(:first-child),.door,.project-tile,.path-card,.project-entry,.ledger-row,.chapter-grid article')];
 if(!reduceMotion&&'IntersectionObserver' in window){
   revealTargets.forEach(element=>element.classList.add('reveal'));
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target);}}),{threshold:.12});
