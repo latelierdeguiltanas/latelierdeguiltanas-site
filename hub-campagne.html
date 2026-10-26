@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Hub de campagne — L’Atelier de Guiltanas</title>
-  <link rel="stylesheet" href="site.css?v=solar-7">
+  <link rel="stylesheet" href="site.css?v=solar-8">
 </head>
 <body>
 <div class="grain"></div>
@@ -22,7 +22,7 @@
       <p>Un Hub unique, avec deux espaces internes. Autour, deux applications autonomes qui peuvent fonctionner seules ou compléter la campagne.</p>
     </div>
 
-    <div class="living-map solar-map ecosystem-v2" role="img" aria-label="Le Hub central contient l’espace MJ et l’espace PJ. Le Soundboard est relié au Hub par un accès simple. Le gestionnaire de combat échange avec le Hub l’initiative, les effets et les points de vie et de mana.">
+    <div class="living-map solar-map ecosystem-v2" aria-label="Carte interactive de l’écosystème Guiltanas">
       <svg viewBox="0 0 600 600" aria-hidden="true">
         <defs>
           <marker id="arrow-gold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z"/></marker>
@@ -39,37 +39,49 @@
         </g>
       </svg>
 
-      <div class="map-card hub-core-v2">
+      <button class="map-card hub-core-v2 ecosystem-trigger" type="button" data-tool="hub" aria-haspopup="dialog" aria-label="Découvrir le Hub de campagne">
         <div class="hub-title"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/hub-192.png" alt=""><span><b>Hub</b><small>La campagne</small></span></div>
         <div class="hub-inside">
           <div class="hub-zone"><span><b>Espace MJ</b><small>Prépare et partage</small></span></div>
           <span class="inside-flow" aria-hidden="true">↔</span>
           <div class="hub-zone"><span><b>Espace PJ</b><small>Consulte et répond</small></span></div>
         </div>
-      </div>
+      </button>
 
-      <div class="map-card satellite-v2 satellite-sound-v2"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/sound-192.png" alt=""><b>Soundboard</b><small>autonome</small></div>
-      <div class="map-card satellite-v2 satellite-combat-v2"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/combat-192.png" alt=""><b>Combat</b><small>autonome</small></div>
+      <button class="map-card satellite-v2 satellite-sound-v2 ecosystem-trigger" type="button" data-tool="sound" aria-haspopup="dialog" aria-label="Découvrir le Soundboard"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/sound-192.png" alt=""><b>Soundboard</b><small>autonome</small></button>
+      <button class="map-card satellite-v2 satellite-combat-v2 ecosystem-trigger" type="button" data-tool="combat" aria-haspopup="dialog" aria-label="Découvrir le gestionnaire de combat"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/combat-192.png" alt=""><b>Combat</b><small>autonome</small></button>
       <span class="flow-caption sound-caption">Ouvrir</span>
       <span class="flow-caption combat-caption">PV · initiative · effets</span>
     </div>
     <div class="map-legend"><span><i class="legend-sync"></i>Échange dans les deux sens</span><span><i class="legend-access"></i>Ouverture uniquement</span><span>Les trois outils restent utilisables seuls.</span></div>
+    <p class="map-instruction">Touchez un outil pour comprendre son rôle.</p>
   </section>
+
+  <div class="tool-modal" id="tool-modal" hidden role="dialog" aria-modal="true" aria-labelledby="tool-modal-title">
+    <button class="tool-modal-backdrop" type="button" aria-label="Fermer"></button>
+    <article class="tool-modal-card" tabindex="-1">
+      <button class="tool-modal-close" type="button" aria-label="Fermer la présentation">×</button>
+      <div class="tool-modal-head"><img id="tool-modal-icon" src="" alt=""><div><small id="tool-modal-kind"></small><h2 id="tool-modal-title"></h2></div></div>
+      <p id="tool-modal-summary"></p>
+      <ul id="tool-modal-points"></ul>
+      <button class="tool-modal-detail" type="button">Voir la fiche détaillée</button>
+    </article>
+  </div>
 
   <section class="tool-stories tool-explorer" id="outils">
     <div class="tool-stories-head"><p class="kicker">Explorer sans se perdre</p><h2>Un rôle clair<br>pour chaque outil.</h2><p>Le schéma donne la logique d’un coup d’œil. Les volets détaillent ensuite les fonctions et les échanges réels.</p></div>
 
-    <details class="tool-panel" open>
+    <details class="tool-panel" id="fiche-hub" data-tool-details="hub">
       <summary><span>01</span><div><small>Outil central</small><b>Le Hub de campagne</b><em>Espace MJ ↔ espace PJ</em></div></summary>
       <div class="panel-body"><div class="tool-visual live-preview"><span>Aperçu réel · un seul outil</span><iframe src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/ile-aux-tempetes-bastide/" title="Aperçu réel du Hub de campagne" loading="lazy" tabindex="-1"></iframe></div><div><h3>Un outil, deux espaces distincts</h3><p>Le Hub est le tableau de bord de la campagne. L’espace MJ et l’espace PJ sont deux parties du même outil, avec un seul accès GitHub et des informations qui circulent entre elles.</p><ul><li><b>Espace MJ :</b> intégrer des visuels, cartes et PNJ ; créer ou choisir des objets ; attribuer objets et monnaie ; afficher ou masquer les informations ; suivre chaque joueur</li><li><b>Espace PJ :</b> fiche interactive, compétences et caractéristiques ; PV et mana ; inventaire et équipement ; messages privés avec le MJ</li><li><b>Espaces personnalisés :</b> contrats de Vive-Lame, hymnes de Scanlan et contenus propres à chaque personnage</li><li><b>MJ ↔ PJ :</b> messages privés, objets, monnaie, cartes, PNJ et informations révélées</li></ul></div></div>
     </details>
 
-    <details class="tool-panel">
+    <details class="tool-panel" id="fiche-combat" data-tool-details="combat">
       <summary><span>02</span><div><small>Application autonome · tactique</small><b>Gestionnaire de combat</b><em>Initiative · effets · PV · PM</em></div></summary>
       <div class="panel-body"><div class="tool-visual live-preview"><span>Aperçu réel · gestionnaire</span><iframe src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/gestionnaire-combat-cof2/" title="Aperçu réel du gestionnaire de combat" loading="lazy" tabindex="-1"></iframe></div><div><h3>Autonome, mais réellement synchronisé</h3><p>Le MJ peut gérer un affrontement uniquement dans l’application. S’il active le partage, certaines données utiles arrivent dans les fiches du Hub.</p><ul><li>Rencontres préparées, initiative et bestiaire personnalisable</li><li><b>Combat → PJ :</b> frise d’initiative, buffs et debuffs personnels</li><li><b>Combat ↔ fiche :</b> points de vie et points de mana maintenus cohérents</li><li>Le partage reste activable ou masquable par le MJ</li></ul></div></div>
     </details>
 
-    <details class="tool-panel">
+    <details class="tool-panel" id="fiche-sound" data-tool-details="sound">
       <summary><span>03</span><div><small>Application autonome · ambiance</small><b>Soundboard</b><em>Ouverture depuis le Hub</em></div></summary>
       <div class="panel-body"><div class="tool-visual live-preview"><span>Aperçu réel · Soundboard</span><iframe src="https://latelierdeguiltanas.github.io/Soundboard_final/" title="Aperçu réel du Soundboard" loading="lazy" tabindex="-1"></iframe></div><div><h3>Un accès, pas une synchronisation</h3><p>Le Soundboard fonctionne entièrement seul. Le Hub peut simplement l’ouvrir rapidement : aucune fiche, ressource ou donnée de personnage ne circule entre les deux.</p><ul><li>Scènes et couches sonores personnalisables</li><li>Import et export des configurations</li><li>Utilisable seul ou lancé depuis le Hub</li><li>Aucune donnée de jeu synchronisée</li></ul></div></div>
     </details>
@@ -83,6 +95,6 @@
   <section class="flow-band"><p class="kicker">Un exemple concret</p><h2>Le MJ lance le combat, partage la frise et applique un effet. Le joueur voit l’ordre, ses buffs ou debuffs et ses PV actualisés dans sa fiche. Le Soundboard accompagne la scène sans toucher aux données de jeu.</h2><p>Le Hub coordonne la campagne sans transformer ses deux espaces internes en applications séparées.</p></section>
 </main>
 <footer><a class="footer-brand" href="index.html"><span class="sigil small">G</span><b>L’Atelier de Guiltanas</b></a><p>Hub de campagne · Écosystème d’outils</p><div><a href="creations.html">Catalogue</a><a href="laboratoire.html">Laboratoire</a></div><small>Travaux en cours</small></footer>
-<script src="site.js"></script>
+<script src="site.js?v=ecosystem-2"></script>
 </body>
 </html>
