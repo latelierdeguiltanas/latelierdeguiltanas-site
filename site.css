@@ -175,3 +175,27 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .section-note,.catalog-head>p,.ecosystem-intro>p{font-size:13.5px;line-height:1.48}
   .path-card h3,.door h3{font-size:17px}.path-card p:not(.access-label),.door p{font-size:12.5px;line-height:1.45}
 }
+
+/* Finition mobile du système : un noyau lisible, aucune fausse icône MJ/PJ */
+.ecosystem-v2 .hub-core-v2{width:154px!important;height:154px!important;padding:13px!important;gap:8px!important}
+.ecosystem-v2 .hub-title{gap:7px}.ecosystem-v2 .hub-title>img{width:48px;height:48px;border-radius:12px}
+.ecosystem-v2 .hub-title b{font-size:23px}.ecosystem-v2 .hub-title small{font-size:5px}
+.ecosystem-v2 .hub-inside{grid-template-columns:1fr 16px 1fr;gap:0}
+.ecosystem-v2 .hub-zone{justify-content:center;padding:6px 3px;border:0;border-top:1px solid rgba(243,234,216,.28);border-radius:0;background:transparent;text-align:center}
+.ecosystem-v2 .hub-zone>span{display:grid!important}.ecosystem-v2 .hub-zone b{font-size:8px;white-space:nowrap}.ecosystem-v2 .hub-zone small{display:block!important;font-size:4.4px;white-space:nowrap}
+.ecosystem-v2 .inside-flow{font-size:13px}
+.ecosystem-v2 .satellite-v2{width:92px!important;height:92px!important;padding:7px!important}
+.ecosystem-v2 .satellite-v2>img{width:42px;height:42px}.ecosystem-v2 .satellite-v2>b{font-size:12px}.ecosystem-v2 .satellite-v2>small{font-size:4.5px}
+.ecosystem-v2 .satellite-sound-v2{left:1%!important}.ecosystem-v2 .satellite-combat-v2{right:1%!important}
+.ecosystem-v2 .flow-caption{position:absolute;z-index:5;top:calc(50% - 31px);color:#b8b3a7;text-transform:uppercase;letter-spacing:.08em;font:6px var(--sans);white-space:nowrap;padding:2px 4px;background:#0d1d17}
+.ecosystem-v2 .sound-caption{left:24%}.ecosystem-v2 .combat-caption{right:20%}
+@media(max-width:700px){
+  .solar-map.ecosystem-v2{width:100%;max-width:360px}
+  .ecosystem-v2 .hub-core-v2{width:116px!important;height:116px!important;padding:8px!important;gap:4px!important}
+  .ecosystem-v2 .hub-title{gap:5px}.ecosystem-v2 .hub-title>img{width:34px;height:34px;border-radius:8px}.ecosystem-v2 .hub-title b{font-size:17px}.ecosystem-v2 .hub-title small{font-size:3.8px}
+  .ecosystem-v2 .hub-inside{grid-template-columns:1fr 10px 1fr}.ecosystem-v2 .hub-zone{padding:4px 1px}.ecosystem-v2 .hub-zone b{font-size:5.8px}.ecosystem-v2 .hub-zone small{font-size:3.2px}.ecosystem-v2 .inside-flow{font-size:9px}
+  .ecosystem-v2 .satellite-v2{width:68px!important;height:68px!important;padding:5px!important}.ecosystem-v2 .satellite-v2>img{width:31px;height:31px;border-radius:7px;margin-bottom:1px}.ecosystem-v2 .satellite-v2>b{font-size:8px}.ecosystem-v2 .satellite-v2>small{font-size:3.4px}
+  .ecosystem-v2 .satellite-sound-v2{left:2%!important}.ecosystem-v2 .satellite-combat-v2{right:2%!important}
+  .ecosystem-v2 .flow-caption{top:calc(50% - 24px);font-size:4.5px;padding:1px 3px}.ecosystem-v2 .sound-caption{left:23%}.ecosystem-v2 .combat-caption{right:17%}
+  .ecosystem-v2 .ecosystem-link{stroke-width:2.8}
+}
