@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>Hub de campagne — L’Atelier de Guiltanas</title>
-  <link rel="stylesheet" href="site.css?v=solar-6">
+  <link rel="stylesheet" href="site.css?v=solar-7">
 </head>
 <body>
 <div class="grain"></div>
@@ -30,30 +30,28 @@
           <filter id="flow-glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
         <circle class="solar-orbit main-orbit" cx="300" cy="300" r="218"/>
-        <circle class="solar-orbit future-ring" cx="300" cy="300" r="265"/>
-        <path id="sound-access" class="ecosystem-link access-only" d="M194 300 L116 300"/>
-        <path id="combat-sync" class="ecosystem-link data-sync" d="M406 300 L484 300"/>
+        <path id="sound-access" class="ecosystem-link access-only" d="M223 300 L119 300"/>
+        <path id="combat-sync" class="ecosystem-link data-sync" d="M377 300 L481 300"/>
         <g class="packets" filter="url(#flow-glow)">
           <circle class="access-dot" r="4"><animateMotion dur="3.4s" repeatCount="indefinite"><mpath href="#sound-access"/></animateMotion></circle>
           <circle class="direct-dot" r="5"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#combat-sync"/></animateMotion></circle>
           <circle class="direct-dot" r="5"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#combat-sync"/></animateMotion></circle>
         </g>
-        <text class="link-label" x="155" y="282" text-anchor="middle">OUVERTURE</text>
-        <text class="link-label" x="445" y="270" text-anchor="middle"><tspan x="445">INITIATIVE · EFFETS</tspan><tspan x="445" dy="14">PV · PM</tspan></text>
       </svg>
 
       <div class="map-card hub-core-v2">
-        <div class="hub-title"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/hub-192.png" alt=""><span><b>Hub</b><small>un seul outil</small></span></div>
+        <div class="hub-title"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/hub-192.png" alt=""><span><b>Hub</b><small>La campagne</small></span></div>
         <div class="hub-inside">
-          <div class="hub-zone"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/gm-192.png" alt=""><span><b>Espace MJ</b><small>Préparer · révéler<br>envoyer · piloter</small></span></div>
+          <div class="hub-zone"><span><b>Espace MJ</b><small>Prépare et partage</small></span></div>
           <span class="inside-flow" aria-hidden="true">↔</span>
-          <div class="hub-zone"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/hero-192.png" alt=""><span><b>Espace PJ</b><small>Fiche · inventaire<br>messages · ressources</small></span></div>
+          <div class="hub-zone"><span><b>Espace PJ</b><small>Consulte et répond</small></span></div>
         </div>
       </div>
 
       <div class="map-card satellite-v2 satellite-sound-v2"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/sound-192.png" alt=""><b>Soundboard</b><small>autonome</small></div>
       <div class="map-card satellite-v2 satellite-combat-v2"><img src="https://latelierdeguiltanas.github.io/atelier-guiltanas-apps/guiltanas-install/combat-192.png" alt=""><b>Combat</b><small>autonome</small></div>
-      <div class="future-slot future-one" aria-hidden="true">+</div><div class="future-slot future-two" aria-hidden="true">+</div>
+      <span class="flow-caption sound-caption">Ouvrir</span>
+      <span class="flow-caption combat-caption">PV · initiative · effets</span>
     </div>
     <div class="map-legend"><span><i class="legend-sync"></i>Échange dans les deux sens</span><span><i class="legend-access"></i>Ouverture uniquement</span><span>Les trois outils restent utilisables seuls.</span></div>
   </section>
