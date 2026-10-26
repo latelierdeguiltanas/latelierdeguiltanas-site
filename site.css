@@ -84,3 +84,20 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .ecosystem-intro{margin-bottom:28px}.map-node{min-height:82px;padding:16px}.map-node b{font-size:21px}.map-link{height:34px}
   footer{padding:28px 17px;gap:16px}
 }
+
+/* Format téléphone compact validé sur retour réel Samsung */
+@media(max-width:560px){
+  .welcome,.page-hero,.realm-hero,.project-hero,.shop-hero,.collection-hero{padding:28px 16px}
+  .welcome h1,.page-hero h1,.project-hero h1,.shop-hero h1,.collection-hero h1{font-size:27px;line-height:1.04;letter-spacing:-.025em;margin:12px 0 13px}
+  .realm-hero h1{font-size:44px}.lead{font-size:13.5px;line-height:1.48;max-width:36rem}.kicker{font-size:7px;letter-spacing:.18em;margin-bottom:10px}.breadcrumb{font-size:7px;margin-bottom:15px}
+  .doorway,.catalog,.chapter-section,.article-layout,.ledger,.project-copy,.project-paths,.project-list,.ecosystem{padding:29px 16px}
+  .section-intro{margin-bottom:17px}.section-intro h2,.catalog-head h2,.project-copy h2,.list-intro h2,.ecosystem-intro h2{font-size:21px;line-height:1.1}.section-note,.catalog-head>p,.ecosystem-intro>p{font-size:12.5px;line-height:1.45;margin-top:8px}
+  .door{padding:14px}.door h3{font-size:18px;margin:13px 0 2px}.door p{font-size:12px;line-height:1.4}.door b{font-size:7px;margin-top:9px}
+  .path-card{padding:14px}.path-index{right:14px;top:12px;font-size:8px}.path-card .access-label{margin:17px 28px 5px 0;font-size:6.5px}.path-card h3{font-size:18px;line-height:1.1;margin-bottom:5px}.path-card p:not(.access-label){font-size:12px;line-height:1.4}.path-card b{margin-top:9px;padding-top:8px;font-size:6.5px}
+  .classification-note{padding:29px 16px}.classification-note h2{font-size:21px;margin-bottom:13px}.classification-note>p:last-child{font-size:12.5px;line-height:1.45}
+  .catalog-grid{grid-auto-columns:78vw}.project-tile{min-height:235px;padding:14px}.project-tile h3{font-size:21px}.project-tile p{font-size:12px;line-height:1.4}.project-tile b{font-size:7px;margin-top:10px;padding-top:10px}.tile-mark{width:58px;height:58px;font-size:27px}
+  .article-layout article p,.project-copy>p:last-child{font-size:13.5px;line-height:1.55}.article-layout h2{font-size:22px;margin:27px 0 8px}.quote{font-size:18px;padding:16px;margin-top:28px}
+  .project-entry{padding:17px 0}.project-entry h3{font-size:20px}.project-entry p{font-size:12.5px;line-height:1.45}.fact-grid article{padding:14px}.fact-grid p{font-size:13px}
+  .ecosystem-intro{margin-bottom:21px}.map-node{min-height:70px;padding:13px}.map-node b{font-size:18px}.map-node span,.map-node small{font-size:6.5px}.map-link{height:28px}
+  .actions{margin-top:16px}.button{min-height:38px;padding:8px 11px;font-size:7px}footer{padding:22px 16px;font-size:8px}
+}
