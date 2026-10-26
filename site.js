@@ -19,11 +19,3 @@ const updateProgress=()=>{const total=document.documentElement.scrollHeight-inne
 addEventListener('scroll',updateProgress,{passive:true});
 updateProgress();
 
-const track=document.querySelector('.reel-track');
-const slides=[...document.querySelectorAll('[data-reel-slide]')];
-const count=document.querySelector('[data-reel-count]');
-let reelIndex=0;
-function showSlide(next){if(!track||!slides.length)return;reelIndex=(next+slides.length)%slides.length;track.style.transform=`translateX(-${reelIndex*100}%)`;slides.forEach((slide,index)=>slide.setAttribute('aria-hidden',String(index!==reelIndex)));if(count)count.textContent=`${reelIndex+1} / ${slides.length}`;}
-document.querySelector('[data-reel-prev]')?.addEventListener('click',()=>showSlide(reelIndex-1));
-document.querySelector('[data-reel-next]')?.addEventListener('click',()=>showSlide(reelIndex+1));
-showSlide(0);
